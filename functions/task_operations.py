@@ -39,3 +39,11 @@ def update_task(tasks: list, index: int, task_name: str, task_description: str) 
     else:
         print("Índice de tarefas inválido.")
         return tasks
+
+
+def check_task(tasks, index):
+    index = int(index) - 1
+    tasks[index]["status"] = not bool(tasks[index]["status"])
+    status = "completada" if tasks[index]["status"] else "incompleta"
+    print(f"Tarefa {index +1} marcada como {status}")
+    return tasks
