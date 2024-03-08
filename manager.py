@@ -18,12 +18,15 @@ while True:
     print("6. Sair")
 
     choice = input("Digite sua escolha: ")
+
     if choice == "1":
         task_name = input("Qual é o nome da tarefa que deseja adicionar? ")
         task_description = input("Qual será a descrição da tarefa?")
         tasks = add_task(tasks, task_name, task_description)
+
     elif choice == "2":
         list_tasks(tasks)
+
     elif choice == "3":
         list_tasks(tasks)
         task_index = input("\nDigite o número da tarefa: ")
@@ -35,9 +38,11 @@ while True:
         list_tasks(tasks)
         index = input("Digite o número da tarefa que deseja completar: ")
         tasks = check_task(tasks, index)
+
     elif choice == "5":
         tasks = delete_tasks_checked(tasks)
         list_tasks(tasks)
+
     elif choice == "6":
         break
 
