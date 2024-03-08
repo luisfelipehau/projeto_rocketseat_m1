@@ -1,4 +1,4 @@
-from functions.task_operations import add_task
+from functions.task_operations import add_task, update_task
 from functions.task_utils import list_tasks
 
 tasks = []
@@ -17,8 +17,14 @@ while True:
         task_name = input("Qual é o nome da tarefa que deseja adicionar? ")
         task_description = input("Qual será a descrição da tarefa?")
         tasks = add_task(tasks, task_name, task_description)
-    if choice == "2":
+    elif choice == "2":
         list_tasks(tasks)
+    elif choice == "3":
+        list_tasks(tasks)
+        task_index = input("\nDigite o número da tarefa: ")
+        task_name = input("Digite o novo nome da tarefa: ")
+        task_description = input("Digite a nova descrição da tarefa: ")
+        tasks = update_task(tasks, task_index, task_name, task_description)
     elif choice == "6":
         break
 
