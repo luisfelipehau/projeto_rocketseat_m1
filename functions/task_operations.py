@@ -31,7 +31,7 @@ def update_task(tasks: list, index: int, task_name: str, task_description: str) 
         list: Lista de tarefas atualizada após a atualização da tarefa.
     """
     index = int(index) - 1
-    if index >= 0 and index < len(tasks):
+    if 0 <= index < len(tasks):
         tasks[index]["name"] = task_name
         tasks[index]["description"] = task_description
         print(f"Tarefa {index+1} atualizada para {task_name}")
@@ -43,19 +43,14 @@ def update_task(tasks: list, index: int, task_name: str, task_description: str) 
 
 def check_task(tasks, index):
     index = int(index) - 1
-    tasks[index]["status"] = not bool(tasks[index]["status"])
-    status = "completada" if tasks[index]["status"] else "incompleta"
-    print(f"Tarefa {index +1} marcada como {status}")
-    return tasks
-
-
-# def delete_tasks_checked(tasks):
-#     incomplete_tasks = [task for task in tasks if not task["status"]]
-#     completed_tasks = [task for task in tasks if task["status"]]
-#     tasks.clear()
-#     tasks.extend(incomplete_tasks)
-#     print(f"{len(completed_tasks)} tarefas completadas foram deletadas.")
-#     return tasks
+    if 0 <= index < len(tasks):
+        tasks[index]["status"] = not bool(tasks[index]["status"])
+        status = "completada" if tasks[index]["status"] else "incompleta"
+        print(f"Tarefa {index +1} marcada como {status}")
+        return tasks
+    else:
+        print("Índice de tarefas inválido.")
+        return tasks
 
 
 def delete_tasks_checked(tasks):
