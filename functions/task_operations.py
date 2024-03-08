@@ -47,3 +47,11 @@ def check_task(tasks, index):
     status = "completada" if tasks[index]["status"] else "incompleta"
     print(f"Tarefa {index +1} marcada como {status}")
     return tasks
+
+
+def delete_tasks_checked(tasks):
+    for task in tasks:
+        if task["status"]:
+            tasks.remove(task)
+    print("Tarefas completadas foram deletadas.")
+    return tasks
