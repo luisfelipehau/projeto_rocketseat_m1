@@ -49,6 +49,15 @@ def check_task(tasks, index):
     return tasks
 
 
+# def delete_tasks_checked(tasks):
+#     incomplete_tasks = [task for task in tasks if not task["status"]]
+#     completed_tasks = [task for task in tasks if task["status"]]
+#     tasks.clear()
+#     tasks.extend(incomplete_tasks)
+#     print(f"{len(completed_tasks)} tarefas completadas foram deletadas.")
+#     return tasks
+
+
 def delete_tasks_checked(tasks):
     for task in tasks:
         if task["status"]:
