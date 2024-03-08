@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-![Task Manager](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png" alt="Task Manager" width="300"/>
 
 ## Descrição
 Este é um simples gerenciador de tarefas em Python, desenvolvido como parte do aprendizado de Python.
