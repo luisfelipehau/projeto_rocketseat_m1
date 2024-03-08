@@ -1,4 +1,5 @@
 # pip3 install requests==2.31.0
+# https://docs.python.org/3/library/
 
 # Importa a biblioteca requests, um módulo de terceiros, para realizar solicitações HTTP
 import requests
